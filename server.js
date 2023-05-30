@@ -5,6 +5,7 @@ require("dotenv").config();
 const cors = require("cors");
 const pizzaRoute = require("./routes/pizzas");
 const sushiRoute = require("./routes/sushi");
+const donnyRoute = require("./routes/donny");
 /* const authRoute = require("./routes/auth");
 
 const {
@@ -78,6 +79,7 @@ app.use((req, res, next) => {
 const PORT = process.env.PORT || 8001;
 app.use("/pizzas", pizzaRoute);
 app.use("/sushi", sushiRoute);
+app.use("/donny", donnyRoute);
 
 app.listen(PORT, (error) => {
   error
@@ -87,25 +89,13 @@ app.listen(PORT, (error) => {
 
 /* 
 
-app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
-
-
-
-app.use('/auth', authRoute);
-
-
 app.get('/', function (req, res) {
     res.send('Hello World');
 });
 
-
 app.get('/posts', getPosts);
-
-
 
 app.get('/edit/:id', getEditPostPage);
 app.put('/editpost/:id', editPost);
-
 
  */
