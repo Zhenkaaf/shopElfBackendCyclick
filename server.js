@@ -77,7 +77,7 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 8001;
 app.use("/pizzas", pizzaRoute);
-app.use("/sushi", pizzaRoute);
+app.use("/sushi", sushiRoute);
 
 app.listen(PORT, (error) => {
   error
