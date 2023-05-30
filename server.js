@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const cors = require("cors");
 const pizzaRoute = require("./routes/pizzas");
+const sushiRoute = require("./routes/sushi");
 /* const authRoute = require("./routes/auth");
 
 const {
@@ -37,10 +38,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-const allowedOrigins = [
-  "https://blog-eta-nine-17.vercel.app",
-  "https://blog-zhenkaaf.vercel.app",
-];
+const allowedOrigins = ["https://zhenkaaf.github.io/shopElfFrontendDeploy/"];
 app.use(
   cors({
     origin: allowedOrigins,
@@ -79,6 +77,7 @@ app.use((req, res, next) => {
 
 const PORT = process.env.PORT || 8001;
 app.use("/pizzas", pizzaRoute);
+app.use("/sushi", pizzaRoute);
 
 app.listen(PORT, (error) => {
   error
