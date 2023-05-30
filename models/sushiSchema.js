@@ -15,6 +15,6 @@ const sushiSchema = new Schema({
   },
 });
 
-const Sushi = mongoose.model("Pizza", sushiSchema);
+const Sushi = mongoose.model("Sushi", sushiSchema);
 
 module.exports = Sushi;
