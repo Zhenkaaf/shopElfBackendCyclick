@@ -49,7 +49,7 @@ app.use(
   })
 );
 
-app.options("/newpost", (req, res, next) => {
+app.options("/neworder", (req, res, next) => {
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader("Access-Control-Allow-Origin", origin);
