@@ -65,7 +65,7 @@ const PORT = process.env.PORT || 8001;
 app.use("/pizzas", pizzaRoute);
 app.use("/sushi", sushiRoute);
 app.use("/donny", donnyRoute);
-app.post("/api/neworder", orderRoute);
+app.post("/neworder", orderRoute);
 
 app.listen(PORT, (error) => {
   error
