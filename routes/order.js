@@ -3,6 +3,7 @@ const OrderSchema = require("../models/orderSchema");
 
 router.post("/neworder", async (req, res) => {
   console.log("neworder");
+  console.log("req.body**", req.body);
   try {
     const { name, email, phone, address, products, totalPrice } = req.body;
     console.log(
