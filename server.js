@@ -6,22 +6,7 @@ const cors = require("cors");
 const pizzaRoute = require("./routes/pizzas");
 const sushiRoute = require("./routes/sushi");
 const donnyRoute = require("./routes/donny");
-/* const authRoute = require("./routes/auth");
-
-const {
-  getPosts,
-  addPost,
-  delPost,
-  getEditPostPage,
-  editPost,
-  getPersonalPosts,
-} = require("./controllers/api-post-controller");
-
-
-const methodOverride = require("method-override");
-const apiRouter = express.Router();
-
-app.use(express.json()); */
+const orderRoute = require("./routes/order");
 
 mongoose
   .connect(process.env.MONGO_URL, {})
@@ -80,6 +65,7 @@ const PORT = process.env.PORT || 8001;
 app.use("/pizzas", pizzaRoute);
 app.use("/sushi", sushiRoute);
 app.use("/donny", donnyRoute);
+app.post("/api/neworder", orderRoute);
 
 app.listen(PORT, (error) => {
   error
